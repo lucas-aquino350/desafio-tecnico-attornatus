@@ -12,7 +12,4 @@ public interface PessoaApi {
     @PostMapping
     @ResponseStatus(code = HttpStatus.CREATED)
     PessoaResponse postPessoa(@RequestBody @Valid PessoaRequest pessoaRequest);
-
-
-
 }
