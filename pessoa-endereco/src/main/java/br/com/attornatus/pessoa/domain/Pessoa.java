@@ -22,6 +22,7 @@ import java.util.UUID;
 public class Pessoa {
 
     @Id
+
     @Column(name = "id", updatable = false, unique = true, nullable = false)
     private UUID idPessoa;
     @NotBlank
@@ -30,7 +31,9 @@ public class Pessoa {
     private LocalDate dataNascimento;
 
     public Pessoa(String nome, LocalDate dataNascimento, Endereco endereco) {
+        this.idPessoa = UUID.randomUUID();
         this.nome = nome;
         this.dataNascimento = dataNascimento;
     }
+
 }
