@@ -1,6 +1,6 @@
-package br.com.attornatus.pessoa.api;
+package br.com.attornatus.pessoa.application.api;
 
-import br.com.attornatus.pessoa.service.PessoaService;
+import br.com.attornatus.pessoa.application.service.PessoaService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.web.bind.annotation.RestController;

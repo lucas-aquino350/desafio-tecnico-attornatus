@@ -1,6 +1,7 @@
 package br.com.attornatus.pessoa.domain;
 
 import br.com.attornatus.endereco.domain.Endereco;
+import br.com.attornatus.pessoa.application.api.PessoaRequest;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -29,10 +30,10 @@ public class Pessoa {
     @NotNull
     private LocalDate dataNascimento;
 
-    public Pessoa(String nome, LocalDate dataNascimento, Endereco endereco) {
-        this.idPessoa = UUID.randomUUID();
-        this.nome = nome;
-        this.dataNascimento = dataNascimento;
-    }
 
+    public Pessoa(PessoaRequest pessoaRequest) {
+        this.idPessoa = UUID.randomUUID();
+        this.nome = pessoaRequest.getNome();
+        this.dataNascimento = pessoaRequest.getDataNascimento();
+    }
 }
