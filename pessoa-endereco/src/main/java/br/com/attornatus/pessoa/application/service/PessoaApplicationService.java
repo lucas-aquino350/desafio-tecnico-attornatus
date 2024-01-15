@@ -12,12 +12,13 @@ import org.springframework.stereotype.Service;
 @Log4j2
 @RequiredArgsConstructor
 public class PessoaApplicationService implements PessoaService {
-    private PessoaRepository pessoaRepository;
+
+    private final PessoaRepository pessoaRepository;
 
     @Override
     public PessoaResponse criaPessoa(PessoaRequest pessoaRequest) {
     log.info("[inicia] PessoaApplicationService - criaPessoa");
-    PessoaResponse pessoa = pessoaRepository.salva(new Pessoa(pessoaRequest));
+    Pessoa pessoa = pessoaRepository.salva(new Pessoa(pessoaRequest));
     log.info("[finaliza] PessoaApplicationService - criaPessoa");
         return new PessoaResponse(pessoa.getIdPessoa());
     }

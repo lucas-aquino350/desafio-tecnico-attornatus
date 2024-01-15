@@ -22,4 +22,11 @@ public class PessoaRequest {
     private String nome;
     @NotNull
     private LocalDate dataNascimento;
+
+    public PessoaRequest(UUID idPessoa, String nome, LocalDate dataNascimento) {
+
+        this.idPessoa = idPessoa;
+        this.nome = nome;
+        this.dataNascimento = dataNascimento;
+    }
 }
