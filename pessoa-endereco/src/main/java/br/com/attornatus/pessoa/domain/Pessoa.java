@@ -22,7 +22,6 @@ import java.util.UUID;
 public class Pessoa {
 
     @Id
-
     @Column(name = "id", updatable = false, unique = true, nullable = false)
     private UUID idPessoa;
     @NotBlank
